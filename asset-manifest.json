@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/NFT-creator/static/css/main.b100e6da.chunk.css",
-    "main.js": "/NFT-creator/static/js/main.6c281e85.chunk.js",
-    "main.js.map": "/NFT-creator/static/js/main.6c281e85.chunk.js.map",
+    "main.js": "/NFT-creator/static/js/main.2680aadc.chunk.js",
+    "main.js.map": "/NFT-creator/static/js/main.2680aadc.chunk.js.map",
     "runtime-main.js": "/NFT-creator/static/js/runtime-main.f50d23cd.js",
     "runtime-main.js.map": "/NFT-creator/static/js/runtime-main.f50d23cd.js.map",
     "static/js/2.e9cd74d3.chunk.js": "/NFT-creator/static/js/2.e9cd74d3.chunk.js",
     "static/js/2.e9cd74d3.chunk.js.map": "/NFT-creator/static/js/2.e9cd74d3.chunk.js.map",
     "index.html": "/NFT-creator/index.html",
-    "precache-manifest.6d845ad174ee863dc2abe189a0d88c1c.js": "/NFT-creator/precache-manifest.6d845ad174ee863dc2abe189a0d88c1c.js",
+    "precache-manifest.513765042af321c6708fd7ef0055d867.js": "/NFT-creator/precache-manifest.513765042af321c6708fd7ef0055d867.js",
     "service-worker.js": "/NFT-creator/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/NFT-creator/static/css/main.b100e6da.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.f50d23cd.js",
     "static/js/2.e9cd74d3.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.6c281e85.chunk.js"
+    "static/js/main.2680aadc.chunk.js"
   ]
 }
