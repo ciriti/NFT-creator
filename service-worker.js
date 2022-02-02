@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/NFT-creator/precache-manifest.2489dba463669896de07f69d4cd0baae.js"
+  "/NFT-creator/precache-manifest.6d845ad174ee863dc2abe189a0d88c1c.js"
 );
 
 self.addEventListener('message', (event) => {
