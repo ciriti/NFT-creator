@@ -62,36 +62,41 @@ class App extends Component {
   }
 
   onSubmit = async (event) => {
-    const { accounts, contract, web3 } = this.state;
-    event.preventDefault()
-    console.log("start add");
-    
-    let result = await ipfs.add(this.state.buffer);
-    console.log("result", result.path)
-    
-    let bs58ifpsHash = this.getBytes32FromIpfsHash(result.path)
-    console.log("into bs58ifpsHash", bs58ifpsHash)
-    console.log("reverse bs58ifpsHash", this.getIpfsHashFromBytes32(bs58ifpsHash));
-    
-    
-    console.log("ifpsHash", bs58ifpsHash);
 
-    // Stores a given value, 5 by default.
-    
-    await contract.methods.save(bs58ifpsHash).send({ from: accounts[0] });
-    // await contract.methods.set(result).send({ from: accounts[0] });
-
-    // Get the value from the contract to prove it worked.
-    // const response = await contract.methods.get().call();
-
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.getOwner(bs58ifpsHash).call();
-
-    console.log("getOwner", response);
-
-    let back2ifpsHash = this.getIpfsHashFromBytes32(bs58ifpsHash)
-    this.setState({ ipfsHash:  back2ifpsHash})
-    console.log("out bs58ifpsHash", back2ifpsHash)
+    try{
+      const { accounts, contract, web3 } = this.state;
+      event.preventDefault()
+      console.log("start add");
+      
+      let result = await ipfs.add(this.state.buffer);
+      console.log("result", result.path)
+      
+      let bs58ifpsHash = this.getBytes32FromIpfsHash(result.path)
+      console.log("into bs58ifpsHash", bs58ifpsHash)
+      console.log("reverse bs58ifpsHash", this.getIpfsHashFromBytes32(bs58ifpsHash));
+      
+      
+      console.log("ifpsHash", bs58ifpsHash);
+  
+      // Stores a given value, 5 by default.
+      
+      await contract.methods.save(bs58ifpsHash).send({ from: accounts[0] });
+      // await contract.methods.set(result).send({ from: accounts[0] });
+  
+      // Get the value from the contract to prove it worked.
+      // const response = await contract.methods.get().call();
+  
+      // Get the value from the contract to prove it worked.
+      const response = await contract.methods.getOwner(bs58ifpsHash).call();
+  
+      console.log("getOwner", response);
+  
+      let back2ifpsHash = this.getIpfsHashFromBytes32(bs58ifpsHash)
+      this.setState({ ipfsHash:  back2ifpsHash})
+      console.log("out bs58ifpsHash", back2ifpsHash)
+    }catch (error){
+      alert("Something went wrong...");
+    }
   }
 
   encode = (event) => {
@@ -172,7 +177,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Your Image</h1>
-              <p>This image is stored on IPFS & The Ethereum Blockchain!</p>
+              <p>Create a new NFT on IPFS & The Ethereum Blockchain!</p>
               <img src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} alt=""/>
               <h2>Upload Image</h2>
               <form onSubmit={this.onSubmit} >
