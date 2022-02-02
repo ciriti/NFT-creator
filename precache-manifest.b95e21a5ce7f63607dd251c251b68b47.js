@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ada4682a41c0e7afffc41282683cde9b",
+    "revision": "265a53748eec973f8412484921572348",
     "url": "/NFT-creator/index.html"
   },
   {
-    "revision": "0ca06b06c082721ccd2f",
+    "revision": "f224d32fd193a75144af",
     "url": "/NFT-creator/static/css/main.b100e6da.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/NFT-creator/static/js/2.182024ba.chunk.js"
   },
   {
-    "revision": "0ca06b06c082721ccd2f",
-    "url": "/NFT-creator/static/js/main.64d43fd5.chunk.js"
+    "revision": "f224d32fd193a75144af",
+    "url": "/NFT-creator/static/js/main.b40c0b36.chunk.js"
   },
   {
     "revision": "adca0941675b9c6cab3e",
